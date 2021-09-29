@@ -135,7 +135,47 @@ hr{
 }
 
 .course{
+    
     width: 252px;
     height: 280px;
 }
 
+/* Media Queries for Mobile */
+
+/* @media only screen and (max-width:688px) {
+    .players{
+        background-color: red;
+    }
+} */
+
+@media (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .player, .blog, .course{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+   
+}
+
+/* For Tab */
+
+@media (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player{
+        justify-content: center;
+    }
+}
